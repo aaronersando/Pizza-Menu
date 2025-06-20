@@ -62,7 +62,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1 style={style}>Pizza Corner</h1>
+      <h1 style={style}>RUSTICO PIZZERIA</h1>
     </header>
   );
 }
@@ -73,13 +73,15 @@ function Menu() {
 
   return (
     <main className="menu">
-      <h2>Our Menu</h2>
+      <h2>ARTISANAL CREATIONS</h2>
 
       {numPizzas > 0 ? (
         <>
           <p>
-            Authentic Global cuisine. Multiple creative dishes to choose from.
-            All from our stone oven, all organic, all delicious.
+            Hand-crafted Neapolitan style pizzas made with locally-sourced
+            ingredients. Each pizza is carefully prepared in our wood-fired oven
+            for an authentic taste that balances tradition with contemporary
+            flavors.
           </p>
 
           <ul className="pizzas">
@@ -112,8 +114,8 @@ function Pizza({ pizzaObj }) {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 10;
-  const closeHour = 22;
+  const openHour = 11;
+  const closeHour = 23;
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
@@ -132,12 +134,12 @@ function Footer() {
 
 function Order({ closeHour, openHour }) {
   return (
-    <div className="order">
+    <div className="order" style={{ textAlign: "center" }}>
       <p>
-        We're happy to welcome you between {openHour}:00 to {closeHour}:00. Come
-        visit us or order online.
+        Join us daily from {openHour}:00 to {closeHour}:00. Dine in our garden
+        terrace or order for delivery. Members get 10% off every Tuesday.
       </p>
-      <button className="btn">Order</button>
+      <button className="btn">ORDER NOW</button>
     </div>
   );
 }
